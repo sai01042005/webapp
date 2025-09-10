@@ -1,0 +1,17 @@
+name: Poster Upload Workflow
+
+on:
+  push:
+    branches:
+      - main  # or your default branch
+
+jobs:
+  upload-poster:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Display success message
+        run: echo "✅ Poster uploaded successfully!"
